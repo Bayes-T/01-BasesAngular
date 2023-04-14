@@ -1,0 +1,20 @@
+<h1>{{nombre}}</h1>
+
+<dl>
+    <td>nombre : </td>
+    <dd>{{nombre}}</dd>
+
+    <td>edad : </td>
+    <dd>{{edad}}</dd>
+
+    <td>Método </td>
+    <dd>{{mostrarNombre()}}</dd>
+
+    <!-- Es un get, no va con paréntesis-->
+    <td>Capitalizar </td>
+    <dd>{{nombreCapitalizado}}</dd>
+
+</dl>
+
+<button (click)="cambiarHeroe()">Cambiar héroe</button>
+<button (click)="cambiarEdad()">Cambiar edad</button>
