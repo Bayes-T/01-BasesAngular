@@ -16,5 +16,13 @@
 
 </dl>
 
-<button (click)="cambiarHeroe()">Cambiar héroe</button>
-<button (click)="cambiarEdad()">Cambiar edad</button>
+<!--Más fácil sería if nombre == superman, mostrar el boton-->
+<button *ngIf=" nombre !== 'Yoda' "
+(click)="cambiarHeroe()">
+Cambiar héroe</button>
+
+<button *ngIf="edad !== -500"
+(click)="cambiarEdad()">
+Cambiar edad</button>
+
+<button (click)="restablecer()">Restablecer</button>

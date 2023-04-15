@@ -24,4 +24,9 @@ export class HeroeComponent {
     cambiarEdad():void{
         this.edad = -500
     }
+
+    restablecer():void {
+        this.nombre = "Superman"
+        this.edad = 45
+    }
 }

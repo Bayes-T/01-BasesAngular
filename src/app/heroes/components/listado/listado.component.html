@@ -1,0 +1,18 @@
+<h1>Listado de héroes</h1>
+
+<div *ngIf="deletedHero; else nothingWasDeleted">
+<h3 >Último Héroe borrado <small>{{deletedHero}}</small></h3>
+</div>
+
+<ng-template #nothingWasDeleted>
+    <h3>No ha borrado nada</h3>
+</ng-template>
+
+
+<button *ngIf="heroNames.length > 0"
+(click)="removeLastHero()">Borrar último héroe</button>
+
+<!--Convierte el li en un template y lo utiliza para multiplicarlo por la misma cantidad de veces que items en la lista -->
+<ul>
+    <li *ngFor="let item of heroNames">{{item}}</li>
+</ul>
